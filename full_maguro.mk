@@ -35,5 +35,13 @@ $(call inherit-product, device/samsung/maguro/device.mk)
 PRODUCT_NAME := full_maguro
 PRODUCT_DEVICE := maguro
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full AOSP on Maguro
+PRODUCT_MODEL := Galaxy Nexus
 PRODUCT_RESTRICT_VENDOR_FILES := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota2.url=78&ID=93998993 \
+    ro.developerid=flappjaxxx \
+    ro.goo.developerid=flappjaxxx \
+    ro.goo.rom=AOSPxXx-Nexus \
+    ro.goo.version=$(shell date -u +%Y%m%d) \
+    ro.goo.board=maguro
